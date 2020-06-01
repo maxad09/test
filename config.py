@@ -4,8 +4,8 @@ import os
 from binance_api import Binance
 
 bot = Binance(
-    API_KEY='',
-    API_SECRET=''
+    API_KEY='DdL1WpiHMChk4DWgrdirKTYAWkeWxVUvtyCGWRSdhGhqWi5Gtcze6Bv4s0dFCKVW',
+    API_SECRET='WxvPEgYNvxWPSJQuvvqIySSkamsMdRL3QroD3mQukIz9gr2sAzMQaAMa26ANNZBL'
 )
 
 """
@@ -15,25 +15,17 @@ bot = Binance(
 """
 pairs = [
    {
-        'base': 'ETH',
-        'quote': 'ADA',
-        'spend_sum': 0.02,  # Сколько тратить base каждый раз при покупке quote
-        'profit_markup': 1, # Какой навар нужен с каждой сделки? (1=1%)
+        'base': 'BNB',
+        'quote': 'ZEC',
+        'spend_sum': 0.0011,  # Сколько тратить base каждый раз при покупке quote
+        'profit_markup': 0.5, # Какой навар нужен с каждой сделки? (1=1%)
         'use_stop_loss': False, # Нужно ли продавать с убытком при падении цены
         'stop_loss': 1, # 1% - На сколько должна упасть цена, что бы продавать с убытком
         'active': True,
-    }, {
-        'base': 'USDT',
-        'quote': 'NEO',
-        'spend_sum': 11,  # Сколько тратить base каждый раз при покупке quote
-        'profit_markup': 1, # Какой навар нужен с каждой сделки? (0.001 = 0.1%)
-        'use_stop_loss': False, # Нужно ли продавать с убытком при падении цены
-        'stop_loss': 2, # 2%  - На сколько должна упасть цена, что бы продавать с убытком
-        'active': False,
     }
 ]
 
-KLINES_LIMITS = 200
+KLINES_LIMITS = 500
 POINTS_TO_ENTER = 7
 
 
